@@ -21,14 +21,46 @@ template_header.innerHTML = `
         left: 50px;
         top: 196px;
         text-align: center;
+        color: white;
+        font-family: 'Poppins', sans-serif;
+    }
+    .head-3{
+        position: absolute;
+        width: 284px;
+        height: 120px;
+        left: 46px;
+        top: 585px;
+        text-align: center;
+        color: white;
+        font-family: 'Poppins', sans-serif;
+    }
+    .head-4{
+        position: absolute;
+        width: 282px;
+        height: 36px;
+        left: 47px;
+        top: 1080px;
+        text-align: center;
         color: black;
         font-family: 'Poppins', sans-serif;
-        background: blue;
     }
+
 </style>
 
-<div class="head-1">
+<div class="head-1" id="head-1">
     heading-1
+</div>
+
+<div class="head-2" id="head-2">
+    heading-2
+</div>
+
+<div class="head-3" id="head-3">
+    heading-3
+</div>
+
+<div class="head-4" id="head-4">
+    heading-4
 </div>
 `;
 
@@ -46,6 +78,9 @@ class TheHeader extends HTMLElement {
     connectedCallback(){
         this.shadowRoot.appendChild(template_header.content.cloneNode(true)); //use the template to make a clone
         this.shadowRoot.querySelector('.head-1').innerHTML = this.getAttribute("head_text");
+        this.shadowRoot.querySelector('.head-2').innerHTML = this.getAttribute("head_text2");
+        this.shadowRoot.querySelector('.head-3').innerHTML = this.getAttribute("head_text3");
+        this.shadowRoot.querySelector('.head-4').innerHTML = this.getAttribute("head_text4");
     }
 
     //To-do - CREATE THE FUNCTIONALITIES HERE!
