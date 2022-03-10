@@ -17,6 +17,7 @@ template_main_head.innerHTML = `
         color: #FFFFFF;
         font-family: 'Poppins', sans-serif;
     }
+    
 </style>
 
 <div class="main-head">
