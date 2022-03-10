@@ -39,10 +39,10 @@ template_header.innerHTML = `
         width: 282px;
         height: 36px;
         left: 47px;
-        top: 1080px;
         text-align: center;
         color: black;
         font-family: 'Poppins', sans-serif;
+        padding-top: 906px;
     }
 
 </style>

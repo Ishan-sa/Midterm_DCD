@@ -5,33 +5,35 @@ var template_background = document.createElement("template"); //<template> </tem
 template_background.innerHTML = `
 <style>
     .cursor{
-        position: absolute;
+        position: relative;
         width: 160px;
         height: 160px;
-        left: 121px;
-        top: 567px;
-        z-index: 1;
+        padding-top: 100px;
+        margin-right: -50px;
+    }
+    .imgBox,
+    .pointerBox {
+        text-align: center;
     }
     .yn{
-        position: absolute;
+        position: relative;
         width: 197px;
         height: 196px;
-        left: 96px;
-        top: 282px;
+        padding-top: 265px;
     }
 </style>
 
-<div>
-    <img src="./Assets/bg.svg" alt="background" id="bg">
-</div>
+<the-header head_text="Do you guys know about fast fashion and its effects on environment?">
+</the-header>
 
-<div>
+<the-button button_text="Tell me about it!"></the-button>
+<div class="imgBox">
+    <img src="./Assets/yes or no.svg" alt="" class="yn">
+</div>
+<div class="pointerBox">
     <img src="./Assets/cursor.gif" alt="" class="cursor">
 </div>
 
-<div>
-    <img src="./Assets/yes or no.svg" alt="" class="yn">
-</div>
 
 `;
 

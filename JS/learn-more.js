@@ -5,11 +5,10 @@ var template_learn_more = document.createElement("template"); //<template> </tem
 template_learn_more.innerHTML = `
 <style>
     .learn-more{
-        position: absolute;
+        position: relative;
         width: 121.25px;
         height: 24.76px;
         left: 127px;
-        top: 1257px;
         background-color: blue;
     }
 </style>
