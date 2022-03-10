@@ -6,107 +6,91 @@ template_background2.innerHTML = `
 <style>
 
    .think-gif{
-       position: absoulte;
+       position: relative;
+       margin-top: 75px;
        left: 95px;
-       top: 69px;
        width: 185px;
        height: 123px;
    }
-   .bg {
-        background-image: url("./Assets/bg.svg");
-        height: 100%;
-        background-repeat: no-repeat;
-   }
-   .bg > img {
-       position: absolute;
-   }
-   
    .clothes{
-       position: absolute;
+       position: relative;
        width: 302px;
        height: 201px;
        left: 37px;
-       top: 300px;
-   }
+       padding-top: 89px;
+    }
+    .rect-grey{
+         position: relative;
+         width: 324px;
+         height: 33px;
+         left: 26px;
+         margin-top: 23px;
+         background: rgba(0,0,0,0.34);
+         border-radius: 7px;
+    }
    .hm{
-        position: absolute;
+        position: relative;
         width: 28.8px;
         height: 18px;
-        left: 54px;
-        top: 586px;    
+        left: 22px;
+        padding-top: 6px;
    }
    .f21{
-        position: absolute;
+        position: relative;
         width: 96px;
         height: 16px;
-        left: 130px;
-        top: 587px;
+        left: 80px;
+        padding-top: 6px;
    }
    .shein{
-        position: absolute;
+        position: relative;
         width: 61px;
         height: 13px;
-        left: 273px;
-        top: 589px;    
-   }
-   .rect-grey{
-        position: absolute;
-        width: 324px;
-        height: 33px;
-        left: 26px;
-        top: 579px;
-        background: rgba(0,0,0,0.34);
-        border-radius: 7px;
-   }
-   .hm, .f21, .shein, .rect-grey{
-       margin-top: -55px;
+        left: 116px;
+        padding-top: 6px;
    }
    .mockup{
-       position: absolute;
+       position: relative;
        top: 4%;
    }
    .any-idea{
-        position: absolute;
+        position: relative;
         width: 189.22px;
         height: 207.72px;
         left: 94.78px;
-        top: 675.78px;
+        padding-top: 130px;
    }
    .no-idea{
-        position: absolute;
+        position: relative;
         width: 208px;
         height: 208px;
-        left: 85px;
-        top: 873px;
+        left: 62px;
    }
 
 </style>
 
-<div class="bg">
     <img src="./Assets/think-gif.gif" class="think-gif" alt="think-img">
-</div>
+    <the-header head_text2="Fast Fashion is a term to describe companies that produce trendy clothes for a cheap price."></the-header>
+
+    <the-header head_text3="The quick turn around times and mass production cause many social and  environmental issues."></the-header>
+
+    <the-header head_text4="I want to know about it!"></the-header>
+
+    <learn-more learn_more="Learn More"></learn-more>
+
+
 
 <div>
     <img src="./Assets/clothes.png" class="clothes" alt="clothes">
 </div>
     
-<div class="rect-grey"></div>
-
-<div>
+<div class="rect-grey">
     <img src="./Assets/H&M.svg" class="hm" alt="h&m">
-</div>
-
-<div>
     <img src="./Assets/F21.svg" class="f21" alt="f21">
-</div>
-
-<div>
     <img src="./Assets/SHEIN.svg" class="shein" alt="Shein">
 </div>
 
-<div>
-    <img src="./Assets/any-idea.svg" class="any-idea" alt="any-idea-vector">
-</div>
+<img src="./Assets/any-idea.svg" class="any-idea" alt="any-idea-vector">
 
 <div>
     <img src="./Assets/no-idea.gif" class="no-idea" alt="no-idea-gif">
