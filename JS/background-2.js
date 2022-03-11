@@ -66,20 +66,24 @@ template_background2.innerHTML = `
         height: 208px;
         left: 62px;
    }
+   .learn-more{
+       position: relative;
+       padding-left: 128px;
+       margin-top: 43px;
+       margin-bottom: 35px;
+   }
 
 </style>
 
+
+
+
+
+<div class="bg">
     <img src="./Assets/think-gif.gif" class="think-gif" alt="think-img">
     <the-header head_text2="Fast Fashion is a term to describe companies that produce trendy clothes for a cheap price."></the-header>
-
     <the-header head_text3="The quick turn around times and mass production cause many social and  environmental issues."></the-header>
-
     <the-header head_text4="I want to know about it!"></the-header>
-
-    <learn-more learn_more="Learn More"></learn-more>
-
-
-
 <div>
     <img src="./Assets/clothes.png" class="clothes" alt="clothes">
 </div>
@@ -95,6 +99,8 @@ template_background2.innerHTML = `
 <div>
     <img src="./Assets/no-idea.gif" class="no-idea" alt="no-idea-gif">
 </div>
+
+<img src="./Assets/learn-more.svg" class="learn-more">
 
 
 
