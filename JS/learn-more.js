@@ -4,18 +4,10 @@ var template_learn_more = document.createElement("template"); //<template> </tem
 //To-do - CREATE THE UI HERE!
 template_learn_more.innerHTML = `
 <style>
-    .learn-more{
-        position: relative;
-        width: 121.25px;
-        height: 24.76px;
-        left: 127px;
-        background-color: blue;
-    }
+    
 </style>
 
-<div class="learn-more">
-    yo
-</div>
+
 `;
 
 //MUST HAVE - CREATE A CLASS WITH HTMLELEMENT POWERS (interfaces/functionalities)
@@ -25,7 +17,7 @@ class LearnMore extends HTMLElement {
     constructor(){
         super(); //pass on the HTMLElement super powers!
         this.attachShadow({mode:"open"}) //Attach it to the shadowRoot
-        this.shadowRoot.querySelector(".learn-more").innerHTML = this.getAttribute("learn_more");
+        
         //To-do - CREATE THE STATES FOR THE UI HERE!
     }
 
