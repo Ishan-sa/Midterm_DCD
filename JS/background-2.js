@@ -81,9 +81,14 @@ template_background2.innerHTML = `
 
 <div class="bg">
     <img src="./Assets/think-gif.gif" class="think-gif" alt="think-img">
+    
     <the-header head_text2="Fast Fashion is a term to describe companies that produce trendy clothes for a cheap price."></the-header>
+
     <the-header head_text3="The quick turn around times and mass production cause many social and  environmental issues."></the-header>
+
     <the-header head_text4="I want to know about it!"></the-header>
+</div>
+
 <div>
     <img src="./Assets/clothes.png" class="clothes" alt="clothes">
 </div>
@@ -96,9 +101,7 @@ template_background2.innerHTML = `
 
 <img src="./Assets/any-idea.svg" class="any-idea" alt="any-idea-vector">
 
-<div>
-    <img src="./Assets/no-idea.gif" class="no-idea" alt="no-idea-gif">
-</div>
+<img src="./Assets/no-idea.gif" class="no-idea" alt="no-idea-gif">
 
 <img src="./Assets/learn-more.svg" class="learn-more">
 
