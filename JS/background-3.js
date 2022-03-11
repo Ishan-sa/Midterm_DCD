@@ -4,11 +4,31 @@ var template_background3 = document.createElement("template"); //<template> </te
 //To-do - CREATE THE UI HERE!
 template_background3.innerHTML = `
 <style>
-   
-</style>
+   .planet{
+       position: relative;
+       width: 40%;
+   }
 
-<div>
-    <img src="./Assets/bg.svg" alt="background" id="bg">
+   .content {
+       margin-top: 200px;
+       text-align: center;
+       padding-left: 5px;
+   }
+
+   .plan {
+    text-align: center;
+   }
+   
+
+</style>
+<div class="content">
+<head-card icon="./Assets/warning.svg" text_uwc="Unsafe Working Conditions" class="hc"></head-card>
+<head-card icon="./Assets/watericon.svg" text_uwc="Water Waste" class="hc"></head-card>
+<head-card icon="./Assets/Pollution.svg" text_uwc="Pollution" class="hc"></head-card>
+</div>
+
+<div class="plan">
+<img src="./Assets/planet.gif" class="planet">
 </div>
 
 `;

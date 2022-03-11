@@ -82,6 +82,10 @@ template_background2.innerHTML = `
 
 </style>
 
+
+
+
+
 <div class="bg">
     <img src="./Assets/think-gif.gif" class="think-gif" alt="think-img">
 </div>

@@ -4,10 +4,40 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
     <script src="./JS/background-3.js"></script>
+    <script src="./JS/head-card.js"></script>
+    <script src="./JS/the-main-head.js"></script>
+    <script src="./JS/the-header.js"></script>
     <title>Page-3</title>
 </head>
 <body>
-    <the-background3></the-background3>
+    <the-main-head main_head="Fast Fashion Issues"></the-main-head>
+    <the-header head_text="The issues regarding fast fashion effect the world at large." class="test"></the-header>
+    <the-background3 class="bg3"></the-background3>
+
+    <style>
+        html, body {
+            height: 100%;
+            position: relative;
+        }
+        
+        .bg3{
+            background-image: url("./Assets/bg.svg");
+            background-size: cover;
+            width: 371px;
+            background-repeat: no-repeat;
+            display: block;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+        }
+
+
+    </style>
 </body>
 </html>
