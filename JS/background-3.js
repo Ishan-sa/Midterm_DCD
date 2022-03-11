@@ -7,6 +7,8 @@ template_background3.innerHTML = `
    .planet{
        position: relative;
        width: 60%;
+       text-align: center;
+       margin-bottom: -115px;
    }
 
    .content {
@@ -14,15 +16,8 @@ template_background3.innerHTML = `
        text-align: center;
        padding-left: 5px;
    }
-
-   .plan {
-        text-align: center;
-   }
 </style>
 
-<img src="./Assets/learn-more.svg" class="learn-more">
-<img src="./Assets/learn-more.svg" class="learn-more">
-<img src="./Assets/learn-more.svg" class="learn-more">
 
 <div class="content">
     <head-card icon="./Assets/warning.svg" text_uwc="Unsafe Working Conditions" class="hc"></head-card>
@@ -30,11 +25,8 @@ template_background3.innerHTML = `
     <head-card icon="./Assets/Pollution.svg" text_uwc="Pollution" class="hc"></head-card>
 </div>
 
-<div class="plan">
-    <img src="./Assets/planet.gif" class="planet">
-</div>
 
-
+<img src="./Assets/planet.gif" class="planet">
 
 `;
 
@@ -52,7 +44,6 @@ class TheBackground3 extends HTMLElement {
     //MUST HAVE - FUNCTION THAT RUNS AFTER IT'S CONNECTED
     connectedCallback(){
         this.shadowRoot.appendChild(template_background3.content.cloneNode(true)); //use the template to make a clone
-        this.shadowRoot.querySelector(".learn-more").innerHTML = this.getAttribute("learn_more");
     }
 
     //To-do - CREATE THE FUNCTIONALITIES HERE!

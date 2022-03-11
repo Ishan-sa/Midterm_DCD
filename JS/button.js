@@ -15,26 +15,35 @@ template_button.innerHTML = `
         // border: 0.5px solid #EFF6EE;
         border-radius: 12px;
         border: none;
+        pointer: cursor;
     }
     .button {
         z-index: 0;
+        pointer: cursor;
     }
     .button_top {
         background: transparent;
         font-size: 0;
         z-index: 2;
+        pointer: cursor;
     }
-    .button_top:hover + .button {
+    .buttonHover:hover + a > .button {
         background: #bababa;
+        pointer: cursor;
     }
 </style>
+<a class="buttonHover" href="./2nd-page.html">
+    <button class='button_top'>
+        hi 
+    </button>
+</a>
 
-<button class='button_top'>
-    hi
-</button>
-<button class='button'>
-    hi
-</button>
+
+<a href="./2nd-page.html">
+    <button class='button'>
+        hi
+    </button>
+</a>    
 `;
 
 //MUST HAVE - CREATE A CLASS WITH HTMLELEMENT POWERS (interfaces/functionalities)

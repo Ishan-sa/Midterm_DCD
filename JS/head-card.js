@@ -15,6 +15,7 @@ template_headcard.innerHTML = `
     width: 300px;
     height: 83px;
     margin-bottom: 20px;
+    padding-top: 10px;
 }
 
 .text_uwc {
@@ -22,20 +23,37 @@ template_headcard.innerHTML = `
     color: white;
     opacity: 100%;
     font-family: 'Poppins', sans-serif;
-    padding-left: 20px;
     white-space: nowrap;
     text-overflow: ellipsis;
+    text-align: left;
+    flex: 1;
 }
 
 .icon_warn {
     position: relative;
     height: 100%;
 }
+.learn-more{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: flex-start;
+    flex: 2;
+    padding-left: 20px;
+}
+.lm{
+    width: 100px;
+    margin-top: -10px;
+}
 </style>
 
 <button class="head_card">
+
     <img class="icon_warn" src="./Assets/warning.svg">
-    <p class="text_uwc">hi</p>
+    <div class="learn-more">
+        <p class="text_uwc">hi</p>
+        <img class="lm" src="./Assets/learn-more.svg">
+    </div>
 </button>
 `;
 

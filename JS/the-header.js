@@ -40,7 +40,7 @@ template_header.innerHTML = `
         height: 36px;
         left: 47px;
         text-align: center;
-        color: black;
+        color: white;
         font-family: 'Poppins', sans-serif;
         padding-top: 906px;
     }
