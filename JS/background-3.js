@@ -20,9 +20,7 @@ template_background3.innerHTML = `
    }
 </style>
 
-<img src="./Assets/learn-more.svg" class="learn-more">
-<img src="./Assets/learn-more.svg" class="learn-more">
-<img src="./Assets/learn-more.svg" class="learn-more">
+
 
 <div class="content">
     <head-card icon="./Assets/warning.svg" text_uwc="Unsafe Working Conditions" class="hc"></head-card>

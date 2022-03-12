@@ -31,11 +31,28 @@ template_headcard.innerHTML = `
     position: relative;
     height: 100%;
 }
+
+.head_content {
+    margin-top: -20px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 100px;
+    height: 100px;
+}
+
+.head_content .learn-more {
+    padding-left: 80px;
+}
+
 </style>
 
 <button class="head_card">
     <img class="icon_warn" src="./Assets/warning.svg">
+<div class="head_content">    
     <p class="text_uwc">hi</p>
+    <img src="./Assets/learn-more.svg" class="learn-more">
+</div>    
 </button>
 `;
 
