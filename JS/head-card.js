@@ -55,6 +55,8 @@ template_headcard.innerHTML = `
         <img class="lm" src="./Assets/learn-more.svg">
     </div>
 </button>
+
+
 `;
 
 //MUST HAVE - CREATE A CLASS WITH HTMLELEMENT POWERS (interfaces/functionalities)
@@ -73,6 +75,8 @@ class HeadCard extends HTMLElement {
         this.shadowRoot.appendChild(template_headcard.content.cloneNode(true)); //use the template to make a clone
         this.shadowRoot.querySelector(".icon_warn").src = this.getAttribute("icon")
         this.shadowRoot.querySelector(".text_uwc").innerHTML = this.getAttribute("text_uwc")
+        this.shadowRoot.querySelector(".lm").onClick = () => document.querySelector
+
     }
 
     //To-do - CREATE THE FUNCTIONALITIES HERE!
