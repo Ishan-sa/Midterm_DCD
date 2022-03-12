@@ -71,12 +71,39 @@ template_background2.innerHTML = `
        padding-left: 128px;
        margin-top: 43px;
        margin-bottom: 35px;
+    //    width: 100px;
+    //    height: 100px;
+    //    transition: width 2s, height 2s;
    }
 
+  .back-div{
+    position: absolute;
+    display: flex;
+    margin-left: 15px;
+    margin-top: 10px;
+  }
+
+  .home-div{
+    position: absolute;
+    display: flex;
+    align-items: right;
+    margin-left: 336px;
+    margin-top: 17px;
+  }
 </style>
 
 
+<div class="back-div">
+    <a href="./home-page.html">
+        <img class="back-button" src="./Assets/arrow-left-line.svg" alt="">
+    </a>
+</div>
 
+<div class="home-div">
+    <a href="./home-page.html">
+        <img class="home-button" src="./Assets/home.svg" alt="">
+    </a>
+</div>
 
 
 <div class="bg">
@@ -103,7 +130,9 @@ template_background2.innerHTML = `
 
 <img src="./Assets/no-idea.gif" class="no-idea" alt="no-idea-gif">
 
-<img src="./Assets/learn-more.svg" class="learn-more">
+<a href="./3rd-page.html">
+    <img src="./Assets/learn-more.svg" class="learn-more">
+</a>
 
 
 
@@ -123,10 +152,26 @@ class TheBackground2 extends HTMLElement {
     //MUST HAVE - FUNCTION THAT RUNS AFTER IT'S CONNECTED
     connectedCallback(){
         this.shadowRoot.appendChild(template_background2.content.cloneNode(true)); //use the template to make a clone
+        // this.shadowRoot.querySelector(".learn-more").onclick = () => this.goToPage3();
+        // this.shadowRoot.querySelector(".learn-more").onmouseenter = () => this.popUp();
+
+    
     }
 
     //To-do - CREATE THE FUNCTIONALITIES HERE!
+// goToPage3(){
+//     this.popUp(); 
+//     setTimeout(()=> {
+//         location.href = "./3rd-page.html"
+//     },2000);
+//     // location.href = "./3rd-page.html"
+// }
+// popUp(){
+//     this.shadowRoot.querySelector(".learn-more").style.cssText = `width: 200px; height: 200px;`;
+// }
+
 }
+
 
 //MUST HAVE - define the tag for the custom elements
 customElements.define("the-background2", TheBackground2)
