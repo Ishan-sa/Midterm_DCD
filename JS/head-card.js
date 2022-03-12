@@ -15,6 +15,7 @@ template_headcard.innerHTML = `
     width: 300px;
     height: 83px;
     margin-bottom: 20px;
+    padding-top: 10px;
 }
 
 .text_uwc {
@@ -22,38 +23,39 @@ template_headcard.innerHTML = `
     color: white;
     opacity: 100%;
     font-family: 'Poppins', sans-serif;
-    padding-left: 20px;
     white-space: nowrap;
     text-overflow: ellipsis;
+    text-align: left;
+    flex: 1;
 }
 
 .icon_warn {
     position: relative;
     height: 100%;
 }
-
-.head_content {
-    margin-top: -20px;
+.learn-more{
     display: flex;
-    align-items: center;
+    justify-content: center;
     flex-direction: column;
+    align-items: flex-start;
+    flex: 2;
+    padding-left: 20px;
+}
+.lm{
     width: 100px;
-    height: 100px;
+    margin-top: -10px;
 }
-
-.head_content .learn-more {
-    padding-left: 80px;
-}
-
 </style>
 
 <button class="head_card">
     <img class="icon_warn" src="./Assets/warning.svg">
-<div class="head_content">    
-    <p class="text_uwc">hi</p>
-    <img src="./Assets/learn-more.svg" class="learn-more">
-</div>    
+    <div class="learn-more">
+        <p class="text_uwc">hi</p>
+        <img class="lm" src="./Assets/learn-more.svg">
+    </div>
 </button>
+
+
 `;
 
 //MUST HAVE - CREATE A CLASS WITH HTMLELEMENT POWERS (interfaces/functionalities)
@@ -72,6 +74,8 @@ class HeadCard extends HTMLElement {
         this.shadowRoot.appendChild(template_headcard.content.cloneNode(true)); //use the template to make a clone
         this.shadowRoot.querySelector(".icon_warn").src = this.getAttribute("icon")
         this.shadowRoot.querySelector(".text_uwc").innerHTML = this.getAttribute("text_uwc")
+        this.shadowRoot.querySelector(".lm").onClick = () => document.querySelector
+
     }
 
     //To-do - CREATE THE FUNCTIONALITIES HERE!
