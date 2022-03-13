@@ -45,6 +45,29 @@ template_headcard.innerHTML = `
     width: 100px;
     margin-top: -10px;
 }
+:root {
+    --mainColor: #ff9800;
+  }
+.lm{
+    background:
+        linear-gradient(
+            to bottom,
+            var(--mainColor) 0%,
+            var(--mainColor) 100%
+        );
+    background-position: 0 100%;
+    background-repeat: repeat-x;
+    background-size: 4px 4px;
+    color: #000;
+    text-decoration: none;
+    transition: background-size .2s;
+    }
+}
+
+.lm:hover {
+    background-size: 4px 50px;
+}
+
 </style>
 
 <button class="head_card">
@@ -75,7 +98,7 @@ class HeadCard extends HTMLElement {
         this.shadowRoot.appendChild(template_headcard.content.cloneNode(true)); //use the template to make a clone
         this.shadowRoot.querySelector(".icon_warn").src = this.getAttribute("icon")
         this.shadowRoot.querySelector(".text_uwc").innerHTML = this.getAttribute("text_uwc")
-        this.shadowRoot.querySelector(".lm").onClick = () => document.querySelector
+       
 
     }
 

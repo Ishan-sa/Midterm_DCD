@@ -57,53 +57,144 @@ template_background2.innerHTML = `
         position: relative;
         width: 189.22px;
         height: 207.72px;
-        left: 94.78px;
         padding-top: 130px;
+        display: block;
+        margin: auto;
    }
    .no-idea{
         position: relative;
         width: 208px;
         height: 208px;
-        left: 62px;
-   }
-   .learn-more{
-       position: relative;
-       padding-left: 128px;
-       margin-top: 43px;
-       margin-bottom: 35px;
-    //    width: 100px;
-    //    height: 100px;
-    //    transition: width 2s, height 2s;
+        display: block;
+        margin: auto;
    }
 
-  .back-div{
-    position: absolute;
-    display: flex;
-    margin-left: 15px;
-    margin-top: 10px;
-  }
 
   .home-div{
     position: absolute;
-    display: flex;
-    align-items: right;
-    margin-left: 336px;
-    margin-top: 17px;
+    top: 22px;
+    right: 22px;
   }
+  
+  .back-div{
+      position: absolute;
+      margin-top: 12px;
+      margin-left: 8px;
+  }
+
+
+  button {
+    border-radius: 10px;
+    background-color: #262626;
+    border: none;
+    color: #fff45c;
+    text-align: center;
+    font-size: 16px;
+    padding: 16px;
+    width: 150px;
+    height: auto;
+    transition: all 0.5s;
+    cursor: pointer;
+    box-shadow: 0 10px 20px -8px rgba(0, 0, 0,.7);
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
+    margin-bottom: 26px;
+    margin-top: 50px;
+  }
+  
+  button{
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+  }
+  
+  button:after {
+    content: '»';
+    position: absolute;
+    opacity: 0;  
+    top: 14px;
+    right: -20px;
+    transition: 0.5s;
+  }
+  
+  button:hover{
+    padding-right: 24px;
+    padding-left:8px;
+  }
+  
+  button:hover:after {
+    opacity: 1;
+    right: 10px;
+  }
+
+  .lmButton{
+    display: flex;
+    justify-content: center;
+  }
+
+  div.arrow {
+    width: 15px;
+    height: 15px;
+    box-sizing: border-box;
+    position: absolute;
+    left: 18px;
+    top: 15px;
+    transform: rotate(135deg);
+    rotate: 90deg;  
+}
+div.arrow::before {
+    content: '';
+    width: 100%;
+    height: 100%;
+    border-width: 3px 3px 0px 0px;
+    border-style: solid;
+    border-color: #7d7d7d;
+    transition: 0.2s ease;
+    display: block;
+    transform-origin: 100% 0;
+}
+div.arrow:after {
+    content: '';
+    float: left;
+    position: relative;
+    top: -100%;
+    width: 100%;
+    height: 100%;
+    border-width: 0 2px 0 0;
+    border-style: solid;
+    border-color: #7d7d7d;
+    transform-origin: 100% 0;
+    transition: 0.2s ease;
+}
+div.arrow:hover::after {
+    transform: rotate(45deg);
+    border-color: #3dcfff;
+    height: 120%;
+}
+div.arrow:hover::before {
+    border-color: #3dcfff;
+    transform: scale(0.8);
+}
+
+
 </style>
+
 
 
 <div class="back-div">
     <a href="./home-page.html">
-        <img class="back-button" src="./Assets/arrow-left-line.svg" alt="">
+        <div class="arrow"></div>
     </a>
 </div>
 
 <div class="home-div">
     <a href="./home-page.html">
-        <img class="home-button" src="./Assets/home.svg" alt="">
+        <img class="home-button" id="shrink" src="./Assets/home.svg" alt="">
     </a>
 </div>
+
+
 
 
 <div class="bg">
@@ -128,11 +219,15 @@ template_background2.innerHTML = `
 
 <img src="./Assets/any-idea.svg" class="any-idea" alt="any-idea-vector">
 
+
 <img src="./Assets/no-idea.gif" class="no-idea" alt="no-idea-gif">
 
 <a href="./3rd-page.html">
-    <img src="./Assets/learn-more.svg" class="learn-more">
+    <div class="lmButton">
+        <button><span>Learn More</span></button>
+    </div>
 </a>
+
 
 
 
