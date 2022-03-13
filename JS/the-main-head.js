@@ -8,7 +8,7 @@ template_main_head.innerHTML = `
         position: absolute;
         text-align: center;
         left: 80px;
-        top: 39px;
+        top: 42px;
         width: 215px;
         height: 30px;
         font-weight: semi-bold;
