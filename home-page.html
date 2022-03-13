@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;500&display=swap" rel="stylesheet"> 
     <script src="./JS/background.js"></script>
     <script src="./JS/button.js"></script>
     <script src="./JS/the-header.js"></script>
@@ -14,11 +14,8 @@
     <title>Page-1</title>
 </head>
 <body>
-    <the-background class="bg2"></the-background>
-    <a href="./3rd-page.html"></a>
-
+    <the-background class="bg2"></the-background>     
     
-    <!-- <the-main-head main_head="What is Fast Fashion?"></the-main-head> -->
     <style>
         html, body{
             height: 100%;
@@ -26,15 +23,21 @@
             display: flex;
             justify-content: center;
         }
-            .bg2{
-                background-image: url("./Assets/bg.svg");
-                background-size: cover;
-                width: 375px;
-                height: 812px;
-                background-repeat: no-repeat;
-                display: block;
-                /* height: 100%; */
-            }
+
+        body{
+            background: linear-gradient(to right, #2C5364, #203A43, #0F2027);
+        }
+        
+        .bg2{
+            background-image: url("./Assets/bg.svg");
+            background-size: cover;
+            width: 375px;
+            height: 812px;
+            background-repeat: no-repeat;
+            display: block;
+            border-radius: 15px;
+            /* height: 100%; */
+        }
         
     </style>
 </body>
