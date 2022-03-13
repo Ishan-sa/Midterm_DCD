@@ -24,6 +24,7 @@ template_background3.innerHTML = `
         z-index: 2;
         display: none;
    }
+   
     .back-div{
         position: absolute;
         display: flex;
@@ -36,7 +37,7 @@ template_background3.innerHTML = `
         display: flex;
         align-items: right;
         margin-left: 314px;
-        margin-top: -747px;
+        margin-top: -548px;
     }
    
 </style>
