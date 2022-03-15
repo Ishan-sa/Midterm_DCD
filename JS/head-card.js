@@ -19,53 +19,25 @@ template_headcard.innerHTML = `
 }
 
 .text_uwc {
-    position: relative;
-    color: white;
-    opacity: 100%;
+    /* position: relative; */
+    color: rgb(255, 255, 255);
     font-family: 'Poppins', sans-serif;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-    text-align: left;
-    flex: 1;
+    /* text-align: left; */
+    /* flex: 1; */
 }
 
 .icon_warn {
     position: relative;
     height: 100%;
 }
-.learn-more{
+.content{
     display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: flex-start;
-    flex: 2;
+    /* justify-content: left; */
+    /* flex-direction: column; */
+    /* align-items: flex-start; */
+    /* flex: 2; */
     padding-left: 20px;
-}
-.lm{
-    width: 100px;
-    margin-top: -10px;
-}
-:root {
-    --mainColor: #ff9800;
-  }
-.lm{
-    background:
-        linear-gradient(
-            to bottom,
-            var(--mainColor) 0%,
-            var(--mainColor) 100%
-        );
-    background-position: 0 100%;
-    background-repeat: repeat-x;
-    background-size: 4px 4px;
-    color: #000;
-    text-decoration: none;
-    transition: background-size .2s;
-    }
-}
-
-.lm:hover {
-    background-size: 4px 50px;
+    text-align: left;
 }
 
 </style>
@@ -73,9 +45,8 @@ template_headcard.innerHTML = `
 <button class="head_card">
 
     <img class="icon_warn" src="./Assets/warning.svg">
-    <div class="learn-more">
+    <div class="content">
         <p class="text_uwc">hi</p>
-        <img class="lm" src="./Assets/learn-more.svg">
     </div>
 </button>
 
