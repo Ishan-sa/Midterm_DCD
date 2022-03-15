@@ -75,6 +75,24 @@ template_background2.innerHTML = `
     top: 22px;
     right: 22px;
   }
+
+  .home-button:hover{
+        filter: invert(55%) sepia(66%) saturate(2329%) hue-rotate(159deg) brightness(104%) contrast(105%);
+    }
+
+    .shrink{
+        -webkit-transform: perspective(1px) translateZ(0);
+        transform: perspective(1px) translateZ(0);
+        box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+        -webkit-transition-duration: 0.3s;
+        transition-duration: 0.3s;
+        -webkit-transition-property: transform;
+        transition-property: transform;
+    }
+    .shrink:hover, .shrink:focus, .shrink:active{
+          -webkit-transform: scale(0.8);
+          transform: scale(0.8);
+      }
   
   .back-div{
       position: absolute;
@@ -149,7 +167,7 @@ div.arrow::before {
     height: 100%;
     border-width: 3px 3px 0px 0px;
     border-style: solid;
-    border-color: #7d7d7d;
+    border-color: #fff;
     transition: 0.2s ease;
     display: block;
     transform-origin: 100% 0;
@@ -163,7 +181,7 @@ div.arrow:after {
     height: 100%;
     border-width: 0 2px 0 0;
     border-style: solid;
-    border-color: #7d7d7d;
+    border-color: #fff;
     transform-origin: 100% 0;
     transition: 0.2s ease;
 }
@@ -190,7 +208,7 @@ div.arrow:hover::before {
 
 <div class="home-div">
     <a href="./home-page.html">
-        <img class="home-button" id="shrink" src="./Assets/home.svg" alt="">
+        <img class="home-button shrink" id="shrink" src="./Assets/home.svg" alt="">
     </a>
 </div>
 
