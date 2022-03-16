@@ -153,7 +153,7 @@ div.arrow:hover::before {
 }
 
 #unsafe, #water-waste, #pollution{
-    top: -400px;
+    top: -400px; 
     animation: drop 1s ease-in-out forwards;
 }
 
@@ -347,6 +347,7 @@ class TheBackground3 extends HTMLElement {
     close_2(){
         this.shadowRoot.querySelector(".popup-2").style.cssText = `
         pointer-events: none;
+        }
         `
     }
     close_3(){
