@@ -5,6 +5,8 @@ var template_background3 = document.createElement("template"); //<template> </te
 template_background3.innerHTML = `
 <style>
 
+
+/* Planet over profit GIF */
    .planet{
        position: relative;
        width: 60%;
@@ -12,22 +14,25 @@ template_background3.innerHTML = `
        margin-bottom: -115px;
    }
 
+
+   /* All the cards */
    .content {
        margin-top: -26px;
        text-align: center;
        padding-left: 5px;
    }
   
-  
+  /* Home button on top */
     .home-div{
         position: absolute;
         top: 22px;
         right: 22px;
     }
-    
+    /* Home button animation */
     .home-button:hover{
         filter: invert(55%) sepia(66%) saturate(2329%) hue-rotate(159deg) brightness(104%) contrast(105%);
     }
+
 
     .back-div{
         position: absolute;
@@ -123,11 +128,18 @@ div.arrow:hover::before {
 }
 
 
+
+
 /* Background fade black */
 
 @keyframes fade{
     0%{opacity: 0%;}
     100%{opacity: 100%;}
+}
+
+@keyframes unfade{
+    0%{opacity: 100%;}
+    100%{opacity: 0%;}
 }
 
 /* Popups centered */
@@ -154,13 +166,21 @@ div.arrow:hover::before {
 
 #unsafe, #water-waste, #pollution{
     top: -400px; 
-    animation: drop 1s ease-in-out forwards;
+    animation: drop 0.5s ease-in-out forwards;
 }
 
 @keyframes drop{
     0%{opacity: 0;}
     50%{transform: translateY(50px);}
     100%{transform: translateY(0px); opacity: 1;}
+}
+
+/* closing animation for the pop ups */
+
+@keyframes close {
+    0%{opacity: 100;}
+    50%{transform: translateY(-50px);}
+    100%{transform: translateY(100px); opacity: 0;}
 }
 
 .ra-1{
@@ -309,9 +329,10 @@ class TheBackground3 extends HTMLElement {
         this.shadowRoot.querySelector(".lm-3").onclick = () => this.popUp3();
 
 
+        // this.shadowRoot.querySelector(".popup").onclick = () => this.close_animation();
+        // this.shadowRoot.querySelector(".popup-2").onclick = () => this.close_animation2();
+        // this.shadowRoot.querySelector(".popup-3").onclick = () => this.close_animation3();
 
-
-        
         this.shadowRoot.querySelector(".popup").onclick = () => this.close_1();
         this.shadowRoot.querySelector(".popup-2").onclick = () => this.close_2();
         this.shadowRoot.querySelector(".popup-3").onclick = () => this.close_3();
@@ -339,11 +360,13 @@ class TheBackground3 extends HTMLElement {
         z-index: 9;
         `;
     }
-    close_1(){
+
+
+  close_1(){
         this.shadowRoot.querySelector(".popup").style.cssText = `
         pointer-events: none;
         `
-    }
+        }
     close_2(){
         this.shadowRoot.querySelector(".popup-2").style.cssText = `
         pointer-events: none;
@@ -355,6 +378,32 @@ class TheBackground3 extends HTMLElement {
         pointer-events: none;
         `
     }
+
+
+    // close_animation(){
+    //     this.shadowRoot.querySelector(".unsafe").style.cssText = `
+    //     animation: close 0.5s ease-in-out forwards;
+    //     `
+    // }
+    // close_animation2(){
+    //     this.shadowRoot.querySelector(".water-waste").style.cssText = `
+    //     animation: close 0.5s ease-in-out forwards;
+    //     `
+    // }
+    // close_animation3(){
+    //     this.shadowRoot.querySelector(".pollution").style.cssText = `
+    //     animation: close 0.5s ease-in-out forwards;
+    //     `
+    // }
+
+    // unfade_screen(){
+    //     this.shadowRoot.querySelector(".popup").style.cssText = `
+    //     animation: unfade 1s ease-in-out forwards;
+    //     pointer-events: none;
+    //     `
+    // }
+
+  
 }
 
 //MUST HAVE - define the tag for the custom elements

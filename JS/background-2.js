@@ -4,7 +4,9 @@ var template_background2 = document.createElement("template"); //<template> </te
 //To-do - CREATE THE UI HERE!
 template_background2.innerHTML = `
 <style>
+    
 
+    /* Thinking GIF */
    .think-gif{
        position: relative;
        margin-top: 75px;
@@ -12,6 +14,8 @@ template_background2.innerHTML = `
        width: 185px;
        height: 123px;
    }
+
+   /* Clothes Image */
    .clothes{
        position: relative;
        width: 302px;
@@ -19,6 +23,8 @@ template_background2.innerHTML = `
        left: 37px;
        padding-top: 89px;
     }
+
+    /* Bar with logos */
     .rect-grey{
          position: relative;
          width: 324px;
@@ -49,10 +55,9 @@ template_background2.innerHTML = `
         left: 116px;
         padding-top: 6px;
    }
-   .mockup{
-       position: relative;
-       top: 4%;
-   }
+  
+   
+   /* Graphic asking any idea what the issues are */
    .any-idea{
         position: relative;
         width: 189.22px;
@@ -61,6 +66,8 @@ template_background2.innerHTML = `
         display: block;
         margin: auto;
    }
+
+   /* GIF saying no idea */
    .no-idea{
         position: relative;
         width: 208px;
@@ -69,7 +76,7 @@ template_background2.innerHTML = `
         margin: auto;
    }
 
-
+/* Home button on top */
   .home-div{
     position: absolute;
     top: 22px;
@@ -79,7 +86,7 @@ template_background2.innerHTML = `
   .home-button:hover{
         filter: invert(55%) sepia(66%) saturate(2329%) hue-rotate(159deg) brightness(104%) contrast(105%);
     }
-
+    /* Animation for the home button */
     .shrink{
         -webkit-transform: perspective(1px) translateZ(0);
         transform: perspective(1px) translateZ(0);
@@ -94,13 +101,16 @@ template_background2.innerHTML = `
           transform: scale(0.8);
       }
   
+
+
+      /* Back button on the top */
   .back-div{
       position: absolute;
       margin-top: 12px;
       margin-left: 8px;
   }
 
-
+  /* Learn more button */
   button {
     border-radius: 10px;
     background-color: #262626;
@@ -196,6 +206,17 @@ div.arrow:hover::before {
 }
 
 
+/* Tried to make elements appear on scroll */
+
+/* .reveal{
+    transform: translateY(150px);
+    opacity: 0;
+}
+.reveal.active{
+    transform: translateY(0px);
+    opacity: 1;
+} */
+
 </style>
 
 
@@ -235,7 +256,10 @@ div.arrow:hover::before {
     <img src="./Assets/SHEIN.svg" class="shein" alt="Shein">
 </div>
 
-<img src="./Assets/any-idea.svg" class="any-idea" alt="any-idea-vector">
+
+<div class="reveal">
+    <img src="./Assets/any-idea.svg" class="any-idea" alt="any-idea-vector">
+</div>
 
 
 <img src="./Assets/no-idea.gif" class="no-idea" alt="no-idea-gif">
@@ -265,23 +289,36 @@ class TheBackground2 extends HTMLElement {
     //MUST HAVE - FUNCTION THAT RUNS AFTER IT'S CONNECTED
     connectedCallback(){
         this.shadowRoot.appendChild(template_background2.content.cloneNode(true)); //use the template to make a clone
-        // this.shadowRoot.querySelector(".learn-more").onclick = () => this.goToPage3();
-        // this.shadowRoot.querySelector(".learn-more").onmouseenter = () => this.popUp();
+
+
+
+        /* Tried to make elements appear on scroll */
+        // window.addEventListener('scroll', reveal);
+    
 
     
     }
 
     //To-do - CREATE THE FUNCTIONALITIES HERE!
-// goToPage3(){
-//     this.popUp(); 
-//     setTimeout(()=> {
-//         location.href = "./3rd-page.html"
-//     },2000);
-//     // location.href = "./3rd-page.html"
-// }
-// popUp(){
-//     this.shadowRoot.querySelector(".learn-more").style.cssText = `width: 200px; height: 200px;`;
-// }
+
+
+
+    /* Tried to make elements appear on scroll */
+    // reveal(){
+    //     var reveals = this.shadowRoot.querySelectorAll(".any-idea");
+
+    //     for (var i = 0; i < reveals.length; i++){
+    //         var windowheight = window.innerHeight;
+    //         var revealtop = reveals[i].getBoundingClientRect().top;
+    //         var revealpoint = 150;
+
+    //         if(revealtop < windowheight - revealpoint){
+    //             reveals[i].classList.add('active');
+    //         } else{
+    //             reveals[i].classList.remove('active');
+    //         }
+    //     }
+    // }
 
 }
 

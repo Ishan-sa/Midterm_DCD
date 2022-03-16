@@ -15,6 +15,8 @@ template_background.innerHTML = `
     .pointerBox {
         text-align: center;
     }
+
+    /* Yes or No Image */
     .yn{
         position: relative;
         width: 197px;
@@ -22,6 +24,9 @@ template_background.innerHTML = `
         padding-top: 265px;
     }
 
+
+
+    /* Arrow pointing upwards */
     .arrow-10 {
         height:60px;
         padding-top: 60px;
@@ -77,6 +82,9 @@ template_background.innerHTML = `
         color: inherit;
       }
       
+
+
+      /* Tell me about it */
       .cta {
         position: absolute;
         margin: auto;
