@@ -5,6 +5,8 @@ var template_background3 = document.createElement("template"); //<template> </te
 template_background3.innerHTML = `
 <style>
 
+
+/* Planet over profit GIF */
    .planet{
        position: relative;
        width: 60%;
@@ -12,22 +14,25 @@ template_background3.innerHTML = `
        margin-bottom: -115px;
    }
 
+
+   /* All the cards */
    .content {
        margin-top: -26px;
        text-align: center;
        padding-left: 5px;
    }
   
-  
+  /* Home button on top */
     .home-div{
         position: absolute;
         top: 22px;
         right: 22px;
     }
-    
+    /* Home button animation */
     .home-button:hover{
         filter: invert(55%) sepia(66%) saturate(2329%) hue-rotate(159deg) brightness(104%) contrast(105%);
     }
+
 
     .back-div{
         position: absolute;
@@ -123,6 +128,8 @@ div.arrow:hover::before {
 }
 
 
+
+
 /* Background fade black */
 
 @keyframes fade{
@@ -159,7 +166,7 @@ div.arrow:hover::before {
 
 #unsafe, #water-waste, #pollution{
     top: -400px; 
-    animation: drop 1s ease-in-out forwards;
+    animation: drop 0.5s ease-in-out forwards;
 }
 
 @keyframes drop{
@@ -322,18 +329,13 @@ class TheBackground3 extends HTMLElement {
         this.shadowRoot.querySelector(".lm-3").onclick = () => this.popUp3();
 
 
+        // this.shadowRoot.querySelector(".popup").onclick = () => this.close_animation();
+        // this.shadowRoot.querySelector(".popup-2").onclick = () => this.close_animation2();
+        // this.shadowRoot.querySelector(".popup-3").onclick = () => this.close_animation3();
 
-
-        
-
-        this.shadowRoot.querySelector(".popup").onclick = () => this.close_animation();
-        this.shadowRoot.querySelector(".popup-2").onclick = () => this.close_animation2();
-        this.shadowRoot.querySelector(".popup-3").onclick = () => this.close_animation3();
-
-
-        // this.shadowRoot.querySelector(".popup").onclick = () => this.close_1();
-        // this.shadowRoot.querySelector(".popup-2").onclick = () => this.close_2();
-        // this.shadowRoot.querySelector(".popup-3").onclick = () => this.close_3();
+        this.shadowRoot.querySelector(".popup").onclick = () => this.close_1();
+        this.shadowRoot.querySelector(".popup-2").onclick = () => this.close_2();
+        this.shadowRoot.querySelector(".popup-3").onclick = () => this.close_3();
 
         // this.shadowRoot.querySelector(".unsafe").onclick = () => this.test();
     }
@@ -359,28 +361,10 @@ class TheBackground3 extends HTMLElement {
         `;
     }
 
-    close_animation(){
-        this.shadowRoot.querySelector("#unsafe").style.cssText = `
-        animation: close 0.5s ease-in-out forwards;
-        `
-    }
-    close_animation2(){
-        this.shadowRoot.querySelector("#water-waste").style.cssText = `
-        animation: close 0.5s ease-in-out forwards;
-        `
-    }
-    close_animation3(){
-        this.shadowRoot.querySelector("#pollution").style.cssText = `
-        animation: close 0.5s ease-in-out forwards;
-        `
-    }
 
-    close_1(){
+  close_1(){
         this.shadowRoot.querySelector(".popup").style.cssText = `
         pointer-events: none;
-        // background: rgba(0,0,0,0);
-        // transition: 2s;
-        // display: flex;
         `
         }
     close_2(){
@@ -394,6 +378,32 @@ class TheBackground3 extends HTMLElement {
         pointer-events: none;
         `
     }
+
+
+    // close_animation(){
+    //     this.shadowRoot.querySelector(".unsafe").style.cssText = `
+    //     animation: close 0.5s ease-in-out forwards;
+    //     `
+    // }
+    // close_animation2(){
+    //     this.shadowRoot.querySelector(".water-waste").style.cssText = `
+    //     animation: close 0.5s ease-in-out forwards;
+    //     `
+    // }
+    // close_animation3(){
+    //     this.shadowRoot.querySelector(".pollution").style.cssText = `
+    //     animation: close 0.5s ease-in-out forwards;
+    //     `
+    // }
+
+    // unfade_screen(){
+    //     this.shadowRoot.querySelector(".popup").style.cssText = `
+    //     animation: unfade 1s ease-in-out forwards;
+    //     pointer-events: none;
+    //     `
+    // }
+
+  
 }
 
 //MUST HAVE - define the tag for the custom elements

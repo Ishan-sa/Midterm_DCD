@@ -5,6 +5,8 @@ var template_headcard = document.createElement("template"); //<template> </templ
 template_headcard.innerHTML = `
 <style>
 
+
+/* CARDS */
 .head_card {
     background-color: rgba(0,0,0,0.4);
     display: flex;
@@ -17,7 +19,7 @@ template_headcard.innerHTML = `
     margin-bottom: 20px;
     padding-top: 10px;
 }
-
+/* Text inside cards */
 .text_uwc {
     /* position: relative; */
     color: rgb(255, 255, 255);
@@ -26,10 +28,14 @@ template_headcard.innerHTML = `
     /* flex: 1; */
 }
 
+
+/* Icons inside cards */
 .icon_warn {
     position: relative;
     height: 100%;
 }
+
+/* Content */
 .content{
     display: flex;
     /* justify-content: left; */
