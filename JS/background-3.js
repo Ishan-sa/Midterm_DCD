@@ -130,6 +130,11 @@ div.arrow:hover::before {
     100%{opacity: 100%;}
 }
 
+@keyframes unfade{
+    0%{opacity: 100%;}
+    100%{opacity: 0%;}
+}
+
 /* Popups centered */
 
 .unsafe, .water-waste, .pollution{
@@ -161,6 +166,14 @@ div.arrow:hover::before {
     0%{opacity: 0;}
     50%{transform: translateY(50px);}
     100%{transform: translateY(0px); opacity: 1;}
+}
+
+/* closing animation for the pop ups */
+
+@keyframes close {
+    0%{opacity: 100;}
+    50%{transform: translateY(-50px);}
+    100%{transform: translateY(100px); opacity: 0;}
 }
 
 .ra-1{
@@ -312,9 +325,15 @@ class TheBackground3 extends HTMLElement {
 
 
         
-        this.shadowRoot.querySelector(".popup").onclick = () => this.close_1();
-        this.shadowRoot.querySelector(".popup-2").onclick = () => this.close_2();
-        this.shadowRoot.querySelector(".popup-3").onclick = () => this.close_3();
+
+        this.shadowRoot.querySelector(".popup").onclick = () => this.close_animation();
+        this.shadowRoot.querySelector(".popup-2").onclick = () => this.close_animation2();
+        this.shadowRoot.querySelector(".popup-3").onclick = () => this.close_animation3();
+
+
+        // this.shadowRoot.querySelector(".popup").onclick = () => this.close_1();
+        // this.shadowRoot.querySelector(".popup-2").onclick = () => this.close_2();
+        // this.shadowRoot.querySelector(".popup-3").onclick = () => this.close_3();
 
         // this.shadowRoot.querySelector(".unsafe").onclick = () => this.test();
     }
@@ -339,11 +358,31 @@ class TheBackground3 extends HTMLElement {
         z-index: 9;
         `;
     }
+
+    close_animation(){
+        this.shadowRoot.querySelector("#unsafe").style.cssText = `
+        animation: close 0.5s ease-in-out forwards;
+        `
+    }
+    close_animation2(){
+        this.shadowRoot.querySelector("#water-waste").style.cssText = `
+        animation: close 0.5s ease-in-out forwards;
+        `
+    }
+    close_animation3(){
+        this.shadowRoot.querySelector("#pollution").style.cssText = `
+        animation: close 0.5s ease-in-out forwards;
+        `
+    }
+
     close_1(){
         this.shadowRoot.querySelector(".popup").style.cssText = `
         pointer-events: none;
+        // background: rgba(0,0,0,0);
+        // transition: 2s;
+        // display: flex;
         `
-    }
+        }
     close_2(){
         this.shadowRoot.querySelector(".popup-2").style.cssText = `
         pointer-events: none;
